@@ -26,7 +26,7 @@
 
                 div
                         {
-                            background-image: url("'__UP_bckURL__'");
+                            background-image: url(__UP_bckURL__);
                         }
             </style>
 
