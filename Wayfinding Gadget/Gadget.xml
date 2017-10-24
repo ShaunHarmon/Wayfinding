@@ -24,10 +24,8 @@
        
     </style>
 
-<body>
     <div class="background"></div>
-    <p id="infoContainer"></p>
-</body>
+
 
 ]]>
 </Content>
