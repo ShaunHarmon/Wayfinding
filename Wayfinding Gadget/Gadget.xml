@@ -3,7 +3,7 @@
     <ModulePrefs title="RevelDigital Path Finding Gadget" author="Revel Digital">
         <UserPref name="rdW" display_name="width" required="true" datatype="hidden" />
         <UserPref name="rdH" display_name="height" required="true"  datatype="hidden" />
-        <UserPref name="bckURL" display_name="Background URL" required="true" datatype="string"/>
+        <UserPref name="bckURL" display_name="Background URL" required="true" datatype="string" />
 
     </ModulePrefs>
     <Content type="html">
