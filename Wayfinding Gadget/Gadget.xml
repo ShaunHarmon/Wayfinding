@@ -24,14 +24,11 @@
                     height: __UP_rdH__px;
                     overflow: hidden;
                 }
-                
+
         .background 
                 {
-                    /* The image used */
                     background-image: url(__UP_ImageURL__);
-                    /* Full height */
                     height: 100%; 
-                    /* Center and scale the image nicely */
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
