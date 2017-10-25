@@ -4,6 +4,7 @@
     <UserPref name="ImageURL" display_name="Backgrund Image URL" datatype="string" />
     <UserPref name="rdW" display_name="width" required="true" datatype="hidden" />
     <UserPref name="rdH" display_name="height" required="true"  datatype="hidden" />
+    <UserPref name="storeJson" display_name="Select File" required="true" datatype="file"/>
 </ModulePrefs>
 
 <Content type="html">
