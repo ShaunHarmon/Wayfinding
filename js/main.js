@@ -74,9 +74,9 @@ addStore.onclick= function(){
 }
 
 exportStore.onclick= function(){
-    var jsonStore = JSON.stringify(storeArray);
+    //var jsonStore = JSON.stringify(storeArray);
 
-    download("Store.txt", jsonStore);
+    download("Store.json", jsonStore);
 }
 
 get_array.onclick= function(){
