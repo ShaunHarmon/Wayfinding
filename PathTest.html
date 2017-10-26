@@ -92,10 +92,9 @@
         function getButtons(items){
                 console.log(items);
                 for (var key in items){
-                        
-                      
-                        //console.log(items.name[key]);
-                        $(".btnContainer").append($("<button>" + key.name + "</button>"));
+                        console.log(key.name);
+                        $(".btnContainer").append($("<button></button>"));
+                        $("button").html(key.name);
 
                 }
         }
