@@ -73,8 +73,8 @@
 <script type="text/javascript">
       var items = [];
       $.getJSON('https://raw.githubusercontent.com/ShaunHarmon/Wayfinding/master/json/Store.json', function(data){
-        $.each(data, function(x,y, name){
-                items.push(x + y + name);
+        $.each(data, function(stores){
+                items.push(stores);
         })
         console.log(items);
       });
