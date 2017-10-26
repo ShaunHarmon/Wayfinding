@@ -73,7 +73,7 @@
       var items = [];
       $.getJSON('https://raw.githubusercontent.com/ShaunHarmon/Wayfinding/master/json/Store.json', function(data){
         items = data;
-      
+        getButtons(items);
      
       });
 
@@ -83,7 +83,7 @@
         
       });
 
-
+function getButtons(items){}
       for (var key in items){
             var button = document.createElement("button");
             button.innerHTML = items.name[key];
@@ -91,6 +91,6 @@
             document.getElementById("container").getElementsByClassName("btnContainer")[0].appendChild(button);
 
       }
-
+}
 </script>
 
