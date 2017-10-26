@@ -92,10 +92,10 @@
         function getButtons(items){
                 console.log(items);
                 for (var key in items){
-                        var button = document.createElement("button");
-                        button.innerHTML = key.name;
+                        
+                      
                         console.log(items.name[key]);
-                        document.getElementsByClassName("btnContainer")[0].appendChild(button);
+                        $(".btnContainer").append($("<button>" + key.name + "</button>"));
 
                 }
         }
