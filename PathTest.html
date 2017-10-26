@@ -87,7 +87,7 @@
       for (var name in items){
             var button = document.createElement("button");
             button.innerHTML = name.name;
-            console.log(name.name);
+            console.log('${items[name]}');
             var body = document.getElementsByClassName("btnContainer")[0];
             body.appendChild(button);
       }
