@@ -72,11 +72,11 @@
 
 <script type="text/javascript">
       var items = [];
-      $.getJSON('https://raw.githubusercontent.com/ShaunHarmon/Wayfinding/master/json/Store.json', function(data){
+      $.getJSON('https://raw.githubusercontent.com/ShaunHarmon/Wayfinding/master/json/Store.json', data);
         console.log(data);
         items = JSON.parse(data);
         console.log(items);
-      });
+     
       
 
 </script>
