@@ -91,8 +91,9 @@
 
         function getButtons(items){
                 console.log(items);
-                for (key in items){
-                        console.log(items.name);
+                var store = items;
+                for (key in store){
+                        console.log(key.name);
                         $(".btnContainer").append($("<button></button>"));
                         $("button").html(key.name);
 
