@@ -83,7 +83,7 @@ get_array.onclick= function(){
     var gridArray = Controller.grid;
     var jsonGrid = JSON.stringify(gridArray);
 
-    download("Grid.txt",jsonGrid);
+    download("Grid.json",jsonGrid);
 }
 
 function download(filename, text) {

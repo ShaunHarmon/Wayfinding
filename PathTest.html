@@ -71,14 +71,18 @@
 <script type="text/javascript" src="./lib/jquery-1.7.2.min.js"></script>
 
 <script type="text/javascript">
+
+
       var items = [];
       $.getJSON('https://raw.githubusercontent.com/ShaunHarmon/Wayfinding/master/json/Store.json', function(data){
-        console.log(data);
         items = data;
         console.log(items);
         console.log(items[2].name);
      
       });
+
+      var grid = [];
+      
 
 </script>
 
