@@ -68,10 +68,14 @@
                   
 </div>
 
-<script id="stores" type="application/json" src="./json/Store.json"></script>
+<script type="text/javascript" src="./lib/jquery-1.7.2.min.js"></script>
 
 <script type="text/javascript">
-      var storeOBJ = JSON.parse(document.getElementById('stores'));
+      var storeOBJ;
+      $.getJSON('https://github.com/ShaunHarmon/Wayfinding/blob/master/json/Store.json', function(json){
+              storeOBJ = json;
+      });
+
       console.log(storeOBJ);
 </script>
 
