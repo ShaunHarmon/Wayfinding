@@ -70,31 +70,34 @@
 <script type="text/javascript">
 
 
-      var items = [];
-      $.getJSON('https://raw.githubusercontent.com/ShaunHarmon/Wayfinding/master/json/Store.json', function(data){
-        items = data;
-        
-        
-      });
-
-      var grid = [];
-      $.getJSON('https://raw.githubusercontent.com/ShaunHarmon/Wayfinding/master/json/Grid.json', function(data){
-        grid = data;
-        
-      });
+        var items = [];
 
 
-$(document).ready(getButtons(items));
+        $.getJSON('https://raw.githubusercontent.com/ShaunHarmon/Wayfinding/master/json/Store.json', function(data){
+                items = data;
+                return items;
+        });
 
-function getButtons(items){
-        console.log(items);
-      for (var key in items){
-            var button = document.createElement("button");
-            button.innerHTML = key.name;
-            console.log(items.name[key]);
-            document.getElementById("container").getElementsByClassName("btnContainer")[0].appendChild(button);
+      
 
-      }
-}
+        var grid = [];
+        $.getJSON('https://raw.githubusercontent.com/ShaunHarmon/Wayfinding/master/json/Grid.json', function(data){
+                grid = data;
+                
+        });
+
+
+        window.document.onload = getButtons(items);
+
+        function getButtons(items){
+                console.log(items);
+                for (var key in items){
+                        var button = document.createElement("button");
+                        button.innerHTML = key.name;
+                        console.log(items.name[key]);
+                        document.getElementById("container").getElementsByClassName("btnContainer")[0].appendChild(button);
+
+                }
+        }
 </script>
 
