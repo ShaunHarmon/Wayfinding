@@ -84,9 +84,10 @@
       });
 
 
-      for (var name in items){
+      for (var key in items){
             var button = document.createElement("button");
-            //button.innerHTML = items.name;
+            button.innerHTML = items.name[key];
+            console.log(items.name[key]);
             document.getElementById("container").getElementsByClassName("btnContainer")[0].appendChild(button);
 
       }
