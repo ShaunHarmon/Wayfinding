@@ -391,6 +391,10 @@ $.extend(Controller, {
             gridY = coord[1],
             grid  = this.grid;
 
+        if(enterStoreMode == true){
+            getStore(gridX, gridY);
+            return;
+        }
         if (this.can('dragStart') && this.isStartPos(gridX, gridY)) {
             this.dragStart();
             return;
@@ -405,7 +409,9 @@ $.extend(Controller, {
         }
         if (this.can('eraseWall') && !grid.isWalkableAt(gridX, gridY)) {
             this.eraseWall(gridX, gridY);
+            
         }
+
     },
     mousemove: function(event) {
         var coord = View.toGridCoordinate(event.pageX, event.pageY),
@@ -436,7 +442,7 @@ $.extend(Controller, {
             break;
         }
     },
-    mouseup: function(event) {
+    mouseup: function(event) { 
         if (Controller.can('rest')) {
             Controller.rest();
         }

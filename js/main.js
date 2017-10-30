@@ -23,12 +23,16 @@ var set_Node_Size = 30;
 var grid_size_x = 64;
 var grid_size_y = 36;
 var storeArray = [];
+var enterStoreMode = false;
 
 
 
 
 
 submit.onclick= function(){
+
+    enterStoreMode = false;
+
     drawArea.style.backgroundImage = 'url("' + input.value + '")';
     $("rect").remove();
     View.startNode = false;
@@ -51,30 +55,19 @@ submit.onclick= function(){
     View.generateGrid(function() {
         Controller.setDefaultStartEndPos();
         Controller.bindEvents();
-        Controller.transition(); // transit to the next state (ready)
+        //Controller.transition(); // transit to the next state (ready)
     });
 }
    
 addStore.onclick= function(){
-    alert("Select coordinates on grid");      
-    $("#draw_area").click(function(_click){
-        //console.log(store.x);
-        //console.log(store.y);
-        var name = prompt("Enter store name"); 
-        $("#draw_area").off("click"); 
-        storeArray.push({
-            x: _click.pageX,
-            y:_click.pageY,
-            name: name
-            });
-           
-    })       
+    alert("Select coordinates on grid");     
+    enterStoreMode = true;   
     
     console.log(storeArray);
 }
 
 exportStore.onclick= function(){
-    //var jsonStore = JSON.stringify(storeArray);
+    var jsonStore = JSON.stringify(storeArray);
 
     download("Store.json", jsonStore);
 }
@@ -84,6 +77,21 @@ get_array.onclick= function(){
     var jsonGrid = JSON.stringify(gridArray);
 
     download("Grid.json",jsonGrid);
+}
+
+function getStore(gridX, gridY){
+    if(enterStoreMode == true){
+        var name = prompt("Enter store name");
+        storeArray.push({
+            x: gridX,
+            y: gridY,
+            name: name
+        });
+        enterStoreMode = false;
+    }
+    Controller.rest();
+    return;
+    
 }
 
 function download(filename, text) {
